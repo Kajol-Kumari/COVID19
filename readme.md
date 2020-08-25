@@ -10,9 +10,13 @@ https://covid-193.p.rapidapi.com/
 ## Frontend
 
 Below are the step to run frontend.
+
 `cd frontend`
+
 `npm install`
+
 `ng serve`
+
 Frontend willl run at `http://localhost:4200`
 
 ## Backend
@@ -20,7 +24,9 @@ Frontend willl run at `http://localhost:4200`
 Below are the steps to be followed fo rruning backend:
 
 `cd backend`
+
 `npm install`
+
 `node run server.js`
 
 Backend will run at `http?..localhost:3000`
