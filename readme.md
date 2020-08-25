@@ -29,4 +29,4 @@ Below are the steps to be followed fo rruning backend:
 
 `node run server.js`
 
-Backend will run at `http?..localhost:3000`
+Backend will run at `http://localhost:3000`
