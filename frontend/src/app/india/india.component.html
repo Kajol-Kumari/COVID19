@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div id="space">
+  <div class="container-fluid">
+    <div class="card" style="width: 100%;" *ngFor="let country of indiaData">
+      <div class="container">
+        <h2>
+          <i class="fa fa-american-sign-language-interpreting fa-2x" aria-hidden="true"> </i> &nbsp;<b>Welcome to {{country.country}}'s COVID-19 Dashboard</b></h2>
+          <div class="row">
+          <div class="col-sm">
+            <h4 class="total">Total Cases Till Now: {{country.cases.total}}</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h5>Last updated:</h5>
+            <h5>{{country.time}}</h5>
+            <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="getData(country)"
+              [gradient]="gradient" [legend]="showLegend" [legendPosition]="legendPosition" [doughnut]="isDoughnut">
+            </ngx-charts-pie-chart>
+          </div>
+          <div class="col-sm">
+            <h4>Deaths</h4>
+            <h4 id="deaths"><b>{{country.deaths.total}}</b></h4>
+            <h4>Active Cases</h4>
+            <h4 id="active"><b>{{country.cases.active}}</b></h4>
+          </div>
+          <div class="col-sm">
+            <h4>Critical</h4>
+            <h4 id="critical"><b>{{country.cases.critical}}</b></h4>
+            <h4>Recovered</h4>
+            <h4 id="recovered"><b>{{country.cases.recovered}}</b></h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

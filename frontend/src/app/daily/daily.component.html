@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div id="space">
+  <div class="container-fluid">
+    <div class="card" style="width: 100%;" *ngFor="let country of indiaData">
+      <div class="container">
+        <h2>
+          <i class="fa fa-american-sign-language-interpreting fa-2x" aria-hidden="true"> </i> <b>&nbsp;Welcome to COVID-19 Daily Update</b></h2>
+          <div class="row">
+            <div class="col-sm">
+              <h4 class="total">Last Updated: {{country.time}}</h4>
+            </div>
+          </div>
+        </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h4>New Deaths Today</h4>
+          <h4 id="deaths"><i class="fa fa-line-chart" aria-hidden="true"></i> &nbsp;<b>{{country.deaths.new}}</b></h4>
+        </div>
+        <div class="col-md">
+          <h4>New Active Cases Today</h4>
+          <h4 id="active"><i class="fa fa-line-chart" aria-hidden="true"></i> &nbsp;<b>{{country.cases.new}}</b></h4>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</div>

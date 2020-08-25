@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div id="space">
+  <div class="container-fluid">
+    <div class="card" style="width: 100%;">
+      <div class="container">
+        <h2><i class="fa fa-american-sign-language-interpreting fa-3x" aria-hidden="true"> </i> &nbsp;<b>Welcome to COVID-19 Statewise Update</b></h2>
+      </div>
+    </div>
+    <div class="container card content" *ngFor="let state of stateData" style="width: 100%;">
+      <div class="row">
+        <div class="col-sm">
+          <h4 class="total">{{state.state}}</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="getData(state)"
+            [gradient]="gradient" [legend]="showLegend" [legendPosition]="legendPosition" [doughnut]="isDoughnut">
+          </ngx-charts-pie-chart>
+        </div>
+        <div class="col-sm">
+          <h4>Confirmed Cases</h4>
+          <h4 id="critical">{{state.noOfCases}}</h4>
+          <h4>Active Today</h4>
+          <h4 id="active">{{state.active}}</h4>
+        </div>
+        <div class="col-sm">
+          <h4>Cured Cases</h4>
+          <h4 id="recovered">{{state.cured}}</h4>
+          <h4>Death Cases</h4>
+          <h4 id="deaths">{{state.deaths}}</h4>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
