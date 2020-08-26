@@ -34,8 +34,20 @@
             <h4 id="recovered"><b>{{country.cases.recovered}}</b></h4>
           </div>
         </div>
-
       </div>
+      <div class="map container">
+        <article>
+          <highcharts-chart
+            [Highcharts]="Highcharts"
+            [constructorType]="'mapChart'"
+            [options]="chartMap"
+            style="width: 100%; height: 650px; display: block;"
+            class="jumbotron bgwhite"
+          ></highcharts-chart>
+      </article>
+      </div>
+
+
     </div>
   </div>
 </div>
