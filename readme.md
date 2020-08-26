@@ -4,7 +4,8 @@ This is a MEAN based app containing the data of total COVID Cases in India along
 
 ## APIs
 
-Reference: https://covid-19-apis.postman.com/
+References: 
+https://covid-19-apis.postman.com/
 
 https://covid-193.p.rapidapi.com/
 
